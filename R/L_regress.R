@@ -31,6 +31,7 @@
 #'
 #' @importFrom stats anova
 #' @importFrom stats lm
+#' @importFrom graphics plot
 #' @importFrom graphics lines
 #'
 #' @examples # for women's world record times for 1500m event example, p 108

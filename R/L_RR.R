@@ -58,6 +58,7 @@
 #' @export
 #'
 #' @importFrom graphics segments
+#' @importFrom graphics plot
 #' @importFrom graphics lines
 #' @importFrom stats optimize
 #' @importFrom stats chisq.test
