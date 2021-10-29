@@ -169,8 +169,8 @@ L_OR <- function(table, null=1, exp.OR=NULL, L.int=2, alpha=0.05, cc=FALSE, tole
   nullh <- exp(-sum(a*log(a/xa), b*log(b/(c1tot-xa)), c*log(c/(r1tot-xa)),
                     d*log(d/(r2tot-c1tot+xa))))
 
-  S2w <- log(1) - log(nullh) # check that this should be the same as S for observed OR
-  lrt <- 2*S2w  # likelihood ratio statistic
+  S2way <- log(1) - log(nullh) # check that this should be the same as S for observed OR
+  lrt <- 2*S2way  # likelihood ratio statistic
   LRt_p <- 1-pchisq(lrt,1)
 
 # do the plot with lines
