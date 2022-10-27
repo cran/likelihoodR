@@ -1,8 +1,8 @@
-c127441c8f6c05f4edb1a6ee94d6b815 *DESCRIPTION
-a17a73059d9ce8de56237528a0b3c965 *NAMESPACE
+b9dbe7b7208d425ac457c51784483f7d *DESCRIPTION
+6b40e08bb58d40bbaa63cd6e3ad3987d *NAMESPACE
 5c55bd2e51514e28c91a13acc2faf1fb *R/L_1way_ANOVA.R
 5c03a9613ee4fb2e7ef1e321b8c2a599 *R/L_1way_RM_ANOVA.R
-0262779a5a0822be8d772eed6251e38c *R/L_1way_cat.R
+77410fc6e7178ec1ce21ffa29aa226fd *R/L_1way_cat.R
 2ccdbbf5772076d3162db05027806d16 *R/L_2S_ttest.R
 5bb61c75c922e04646309a490ae43aa5 *R/L_2way_Factorial_ANOVA.R
 161048edea31e3721d5f8acd5b9074ef *R/L_2way_cat.R
@@ -11,9 +11,9 @@ c251ad544c501246bb5a3fb86f6edb12 *R/L_OR.R
 9dfa30e0b7c8cc7ad2f4945b751b0c94 *R/L_corr.R
 cf8fbfa2301deb25dcc7bf30bbeef942 *R/L_efficacy.R
 b5bd708114dabb8138c7273a563c83d3 *R/L_logistic_regress.R
-89199e2bb5cb0982b16d83c574da5c8e *R/L_regress.R
+2d1c302d9a7f24a5cb803aac4af7c762 *R/L_regress.R
 dd4f02f6e6a9f896a06cfa9bf604f8b3 *R/L_t_test_sample_size.R
-65c1853af5f1489bd3ee292fa42c8d02 *R/L_ttest.R
+3fb3c25b3ab1296f4d98423686fe4619 *R/L_ttest.R
 ee7ab3f59a9357b9bfed4c434b34f094 *man/L_1way_ANOVA.Rd
 145baf4e6ffe0a65c3fddb5706244f13 *man/L_1way_RM_ANOVA.Rd
 d61c424bef4624993ee48d1a1bdbf69e *man/L_1way_cat.Rd
@@ -25,6 +25,6 @@ fabad27387aa1ec7b55ad0f440de138f *man/L_RR.Rd
 6aa42451f59e79949c56151bcb66ce7b *man/L_corr.Rd
 faeff6b5146307fd176bbfaa35f6e7d0 *man/L_efficacy.Rd
 14c3b87d26c031f9e7838b1fca648190 *man/L_logistic_regress.Rd
-c37778f130a01e152d1483397c848cdb *man/L_regress.Rd
+5bdd7d99559ad5651b57e524aceb0822 *man/L_regress.Rd
 1776e8243b47876dabf47e1235455d21 *man/L_t_test_sample_size.Rd
 fb1176a6580b18b29210949aec6179c1 *man/L_ttest.Rd

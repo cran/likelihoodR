@@ -3,7 +3,7 @@
 #' This function calculates the supports for different regression fits from 2 vectors of data.
 #' Models include linear, quadratic and cubic (given sufficient data). A plot is
 #' included showing linear (black), quadratic (red) and cubic (blue dashed) lines. P values for
-#' tehe model fits are also given.
+#' the model fits are also given.
 #'
 #' @usage L_regress(y, x, verb=TRUE)
 #' @param x a numeric vector.
@@ -65,9 +65,9 @@ L_regress <- function(y, x, verb=TRUE) {
   S_LN <- -0.5 * N * (log(m1$`Sum Sq`[2]) - log(tss))
 
 # Akaike's correction
-  k2 <- 1       # parameters for grand mean
-  k1 <- m1$Df[1] + 1  # parameters for slope and intercept
-  Ac <- k1 - k2
+  k1 <- 2       # parameters for grand mean & variance
+  k2 <- k1 + 1  # null parameters + parameter/df for linear
+  Ac <- k2 - k1
   S_LNc <- S_LN - Ac
 
 # examining non-linearity

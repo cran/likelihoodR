@@ -134,11 +134,13 @@ L_1way_cat <- function(obs, exp.p=NULL, L.int=2, alpha=0.05, toler=0.0001, verb=
   goal <- -L.int
   xmin1L <- optimize(f, c(0, p), tol = toler, a, r, p, goal)
   xmin2L <- optimize(f, c(p, 1), tol = toler, a, r, p, goal)
-  if (p < .5) { lolim <- 0; hilim <- p + 6*sqrt(p*(1-p)/n)}
-  else {hilim <- 1; lolim <- p - 6*sqrt(p*(1-p)/n)}
+
+  if (p < .5) { lolim <- p - 4*sqrt(p*(1-p)/n); hilim <- p + 4*sqrt(p*(1-p)/n)
+  } else {hilim <- p + 4*sqrt(p*(1-p)/n); lolim <- p - 4*sqrt(p*(1-p)/n)}
   if (lolim < 0) {lolim <- 0}
   if (hilim > 1) {hilim <- 1}
-  curve((x^a*(1-x)^r)/(p^a*(1-p)^r), xlim = c(lolim,hilim), xlab = "Probability", ylab = "Likelihood")
+
+  curve((x^a*(1-x)^r)/(p^a*(1-p)^r), from = 0, to = 1, xlim = c(lolim,hilim), xlab = "Probability", ylab = "Likelihood")
   lines(c(p,p),c(0,1),lty=2) # add MLE as dashed line
   lines(c(exp.p[1],exp.p[1]),c(0,(exp.p[1]^a*(1-exp.p[1])^r)/(p^a*(1-p)^r)),
                                 lty=1, col = "blue") # add H prob as blue line
