@@ -1,12 +1,12 @@
-b9dbe7b7208d425ac457c51784483f7d *DESCRIPTION
+4aef1c56d3d75cdc2ded02b58beaae8a *DESCRIPTION
 6b40e08bb58d40bbaa63cd6e3ad3987d *NAMESPACE
 5c55bd2e51514e28c91a13acc2faf1fb *R/L_1way_ANOVA.R
 5c03a9613ee4fb2e7ef1e321b8c2a599 *R/L_1way_RM_ANOVA.R
-77410fc6e7178ec1ce21ffa29aa226fd *R/L_1way_cat.R
+c1f6e75e6412cd54f6c820fc73b0a8eb *R/L_1way_cat.R
 2ccdbbf5772076d3162db05027806d16 *R/L_2S_ttest.R
 5bb61c75c922e04646309a490ae43aa5 *R/L_2way_Factorial_ANOVA.R
-161048edea31e3721d5f8acd5b9074ef *R/L_2way_cat.R
-c251ad544c501246bb5a3fb86f6edb12 *R/L_OR.R
+13f10071342781f62e22b57f5757f460 *R/L_2way_cat.R
+70f7e9e09f03d586fb38a60ae81c0ec5 *R/L_OR.R
 2b61b7a0922364d8ccbdf8dc8bdc3f8e *R/L_RR.R
 9dfa30e0b7c8cc7ad2f4945b751b0c94 *R/L_corr.R
 cf8fbfa2301deb25dcc7bf30bbeef942 *R/L_efficacy.R
@@ -20,7 +20,7 @@ d61c424bef4624993ee48d1a1bdbf69e *man/L_1way_cat.Rd
 2b483ca9b7085c8563e820fb90890535 *man/L_2S_ttest.Rd
 91e009546c6b72820212f1c39798ebac *man/L_2way_Factorial_ANOVA.Rd
 a252bd17c6d53fe14cf9796e88f0d3a1 *man/L_2way_cat.Rd
-1ef4270225cc13c13c27e91dde1bd091 *man/L_OR.Rd
+d6c45b8848f19a577d34796fafa4c6e4 *man/L_OR.Rd
 fabad27387aa1ec7b55ad0f440de138f *man/L_RR.Rd
 6aa42451f59e79949c56151bcb66ce7b *man/L_corr.Rd
 faeff6b5146307fd176bbfaa35f6e7d0 *man/L_efficacy.Rd
