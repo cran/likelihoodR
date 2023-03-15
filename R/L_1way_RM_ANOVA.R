@@ -128,9 +128,9 @@ L_1way_RM_ANOVA <- function(dat, group, ID, contrast1=NULL, contrast2=NULL, verb
   "versus group means model = ", round(S_cont1_means,3),
   "\n Support for contrast 1 versus contrast 2 ", if (is.null(nulfg)) "(quadratic) ", "= ", round(S_cont_12,3),
   "\n\nOverall analysis F(",dfv[2],",",dfv[3],") = ", round(Fval,3),
-  ", p = ", round(Pval,5), ", partial eta-squared = ", round(eta_sq,3),
+  ", p = ", format.pval(Pval,4), ", partial eta-squared = ", round(eta_sq,3),
   "\nContrast 1 F(1,",dfv[3],") = ", round(Fval_c1,3),
-  ", p = ", round(Pval_c1,5), "\n ")
+  ", p = ", format.pval(Pval_c1,4), "\n ")
 
   df1 <- c(1, m1$Df[3])
   invisible(list(S.12 = S_12, S.1m = S_cont1_means, S.cont.12 = S_cont_12,
