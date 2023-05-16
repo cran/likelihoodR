@@ -162,12 +162,12 @@ L_RR <- function(table, null=1, exp.RR=NULL, L.int=2, alpha=0.05, cc=FALSE, tole
   hilim <- xmin2x$minimum*(r2tot-c1tot+xmin2x$minimum)/((c1tot-xmin2x$minimum)*(r1tot-xmin2x$minimum))
 
   # to determine height of exp.RR on likelihood function
+  h <- function(x,c1tot,r1tot,r2tot,goal) {
+    (x*(r2tot)/((c1tot-x)*(r1tot))-goal)^2
+  }
   if (!is.null(exp.RR)) {
     goal <- exp.RR
-    g <- function(x,c1tot,r1tot,r2tot,goal) {
-      (x*(r2tot)/((c1tot-x)*(r1tot))-goal)^2
-    }
-    exa <- optimize(g, c(dvs, dve), tol = toler, c1tot, r1tot, r2tot, goal)
+    exa <- optimize(h, c(dvs, dve), tol = toler, c1tot, r1tot, r2tot, goal)
     xa <- unname(unlist(exa[1]))
     xah <- exp(-sum(a*log(a/xa), b*log(b/(c1tot-xa)), c*log(c/(r1tot-xa)), d*log(d/(r2tot-c1tot+xa))))
   }
@@ -175,14 +175,11 @@ L_RR <- function(table, null=1, exp.RR=NULL, L.int=2, alpha=0.05, cc=FALSE, tole
   # and likelihood for 1 (null value)
 
   goal <- null
-  h <- function(x,c1tot,r1tot,r2tot,goal) {
-    (x*(r2tot)/((c1tot-x)*(r1tot))-goal)^2
-  }
   exan <- optimize(h, c(dvs, dve), tol = toler, c1tot, r1tot, r2tot, goal)
   xa <- unname(unlist(exan[1]))
   nullh <- exp(-sum(a*log(a/xa), b*log(b/(c1tot-xa)), c*log(c/(r1tot-xa)), d*log(d/(r2tot-c1tot+xa))))
 
-  S2way <- log(1) - log(nullh) # check that this should be the same as S for observed RR
+  S2way <- -log(nullh) # check that this should be the same as S for observed RR
 
   # do the plot with lines
 

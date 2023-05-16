@@ -118,6 +118,8 @@ L_2way_Factorial_ANOVA <- function(data, factor1, factor2, contrast1=NULL, contr
   F1 <- factor1
   F2 <- factor2
 
+  dframe <- data.frame(dat,factor1,factor2)
+
   options(contrasts = c("contr.sum","contr.poly")) # for type III SS
   model <- lm(dat~F1*F2)
   m1 <- drop1(model, .~., test="F")
@@ -173,7 +175,13 @@ L_2way_Factorial_ANOVA <- function(data, factor1, factor2, contrast1=NULL, contr
       }
     }
 
-  interaction.plot(F1, F2, dat, ylab="Means")
+  interaction.plot(F1, F2, dat, lwd=2,ylab="Means")
+
+#    plot <-   interaction.plot(Factor1, Factor2, plotData$dep,
+#                             xlab = self$options$factor1, trace.label = self$options$factor2, lwd=2, ylab="Means")
+#  lines(xv,yv,lty=3,col="red") # add mean as dashed line
+#  text(x=nl,y=gm,pos=4,label = "Grand mean", col="red")
+
 
   Fval <- m1$`F value`[2:4]
   Pval <- m1$`Pr(>F)`[2:4]
