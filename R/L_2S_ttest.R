@@ -100,7 +100,7 @@ L_2S_ttest <- function(data, group, veq=0, null=0, d=0.5, alt.2=NULL, L.int=2, t
   sd1 <- sd(dat[gp==lev[1]],na.rm=TRUE)
   sd2 <- sd(dat[gp==lev[2]],na.rm=TRUE)
   SD <- sqrt(sd1^2+sd2^2)
-  tres0 <- t.test(dat~gp, mu = null, paired=FALSE,var.equal=veq) #
+  tres0 <- t.test(dat~gp, mu = null, var.equal=veq) #
   m.obs <- unname(tres0$estimate[1]-tres0$estimate[2]) # t test does it this way
   sed <- unname(tres0$stderr)   #SE
   SD <- sqrt(sd1^2 + sd2^2)     # non-pooled SD
@@ -110,7 +110,7 @@ L_2S_ttest <- function(data, group, veq=0, null=0, d=0.5, alt.2=NULL, L.int=2, t
   }
   obs_es <- m.obs/SD      # observed effect size
   alt.1 <- SD*d           # specified effect size
-  tres1 <- t.test(dat~gp, mu = alt.1, paired=FALSE, var.equal=veq) # sp. effect size
+  tres1 <- t.test(dat~gp, mu = alt.1, var.equal=veq) # sp. effect size
   N <- ns + nc
   df <- unname(tres0$parameter)
   pval <- unname(unlist(tres0$p.value))
@@ -123,7 +123,7 @@ L_2S_ttest <- function(data, group, veq=0, null=0, d=0.5, alt.2=NULL, L.int=2, t
   S_12 = NULL
   S_20 = NULL
   if (!is.null(alt.2 )) {
-    tres2 <- t.test(dat~gp, mu = alt.2, paired=FALSE, var.equal=veq)  #alt H2
+    tres2 <- t.test(dat~gp, mu = alt.2, var.equal=veq)  #alt H2
     like2 <- unname((1 + tres2$statistic^2/df)^-(N/2)) #L2
     S_12 <- log(like1)-log(like2)
     S_20 <- S_10 - S_12
