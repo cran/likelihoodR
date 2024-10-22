@@ -1,4 +1,4 @@
-c6e32ec1c741932c6de2ca2ad32d757d *DESCRIPTION
+b9e1715e035cd40ca097e5d239919b0f *DESCRIPTION
 e1b31edb96e40bcbf8f4b1c732041f33 *NAMESPACE
 f6bf4d549054198edbdf502d2b8e4ee7 *R/L_1way_ANOVA.R
 056b30d8ab237fbab4b42837b5666637 *R/L_1way_RM_ANOVA.R
@@ -12,7 +12,7 @@ f6bf4d549054198edbdf502d2b8e4ee7 *R/L_1way_ANOVA.R
 b6c28d54ae03bc5d11ddbe20e342ef29 *R/L_efficacy.R
 27b27d6a2b146f6a5ab33edd8bf28c8e *R/L_logistic_regress.R
 315472a9813dc994c0a2d7db0df95116 *R/L_regress.R
-77cbf3cbe5a27bf5d8d44683dc596c5f *R/L_t_test_sample_size.R
+4bdaf6a19a999523c797cdd5a6a7ab55 *R/L_t_test_sample_size.R
 de0ec8dc7e7cde747e147832cedae25e *R/L_ttest.R
 ee7ab3f59a9357b9bfed4c434b34f094 *man/L_1way_ANOVA.Rd
 62f8a93ec6b70887a996a6ce5280fedd *man/L_1way_RM_ANOVA.Rd
